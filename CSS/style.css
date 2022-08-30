@@ -1,0 +1,130 @@
+.bg-img-galaxy{
+    background-image: url(/IMG/vecteezy_space-galaxy-background_.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.play-btn-position{
+    margin-top: 60px;
+}
+
+.font-family{
+    font-family: myFirstFont;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.item-font{
+    font-family: myFirstFont;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(/Font/upheavtt.ttf);
+}
+  
+
+.animation{
+    position: relative;
+    animation: cosmic-entity 2s infinite;
+    width: 60%;
+}
+
+@keyframes cosmic-entity {
+        0%   {left:5px; top:5px;}
+        25%  {left:10px; top:10px;}
+        50%  {left:5px; top:5px;}
+        75%  {left:10px; top:10px;}
+        100% {left:5px; top:5px;}   
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+
+.button-style{
+    background-color: yellow;
+    border-radius: 10px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.answer-box{
+    height: 200px;
+    border-radius: 20px;
+}
+
+
+.custom-container{
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.custom-container > h5{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.socialmedia-icons a img{
+    width: 40px;
+    margin-left: 20px;
+}
+
+.font-border > p{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+
+  
+/* Media query */
+
+@media (min-width: 768px){
+    .animation{
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px){
+    .animation{
+        width: 70%;
+    }
+
+    .font-border > p{
+        font-size: 20px;
+       
+    }
+    
+}
+
+@media (min-height: 896px), (min-height: 844px){
+    .h-md{
+        padding-top: 20px;
+    }
+}
+
+
+
+
+
+

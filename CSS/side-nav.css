@@ -1,0 +1,54 @@
+.side-nav{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side-nav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 30px;
+
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav > a:hover, #fbIcon:hover, #igIcon:hover{
+    transform: scale(1.1);
+}
+
+.side-nav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.img-size{
+    width: 40px;
+    margin-top: 10px;
+    
+}
+
+a > .icons{
+    width: 30px;
+    margin-top: 10px;
+    transition: transform .2s;
+}
+
+a > .icons:hover {
+    transform: scale(1.5); 
+}
+
+
+@media screen and (max-height: 500px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
