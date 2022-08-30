@@ -115,15 +115,15 @@ function resetBtn(){
     document.getElementById("question").value = "";
     document.getElementById("petition").disabled = false;
     document.getElementById("question").disabled = false;
-    model.answer = " ";
-    model.answerToggle = false;
-    model.toReset = false;
+ 
 };
 
 // Reset petitionon focus
-// function resetOnFocus(){
-   
-// }
+function resetOnFocus(){
+    model.answer = " ";
+    model.answerToggle = false;
+    model.toReset = false;
+}
 
 
 // Play
