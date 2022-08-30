@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask The Universe</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="/CSS/side-nav.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/share-style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-img-galaxy">
+    <div class="container-fluid">
+        <!--Side Nav-->
+        <nav class="side-nav bg-warning" id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
+            </a>
+            <a class="nav-link item-font text-warning" href="">
+                Ask the Universe
+            </a>
+            <a class="nav-link item-font text-warning" href="/howtoplay.html">
+                How to Play?
+            </a>
+            <a class="nav-link item-font text-warning" href="#" onclick="showTranslator()">
+                Language
+            </a>
+             <div id="google_translate_element" class="ms-4"></div>
+
+            <a class="nav-link item-font text-warning" href="#" onclick="showSmIcons()">
+                Follow us
+            </a>
+            <div class="d-flex socialmedia-icons">
+                <a href="https://www.facebook.com/RjhayCostales" id="fbIcon" target="_blank">
+                    <img src="/Icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/fineapple_skate/" id="igIcon" target="_blank">
+                    <img src="/Icons/instagram.webp" alt="Instagram">
+                </a>
+            </div>
+        </nav>
+
+        <div class="d-flex flex-row">
+            <div class="col">
+                <span onclick="openNav()"><img class="img-size" src="/Icons/menu-svgrepo-com copy.png" alt=""></span>
+            </div>
+            <div class="d-inline">
+                <a href="/howtoplay.html">
+                    <img class="icons me-3" src="/Icons/help.png" alt="Help">
+                </a>
+                <!--Share Button API-->
+                <div class="share-dialog">
+                    <header>
+                        <h3 class="dialog-title">Share this pen</h3>
+                        <button class="close-button"><svg>
+                                <use href="#close"></use>
+                            </svg></button>
+                    </header>
+                    <div class="targets">
+                        <a class="button">
+                            <svg>
+                                <use href="#facebook"></use>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+
+                        <a class="button">
+                            <svg>
+                                <use href="#twitter"></use>
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+
+                        <a class="button">
+                            <svg>
+                                <use href="#linkedin"></use>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <a class="button">
+                            <svg>
+                                <use href="#email"></use>
+                            </svg>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                    <div class="link">
+                        <div class="pen-url">http://127.0.0.1:5500/index.html</div>
+                        <button class="copy-link">Copy Link</button>
+                    </div>
+                </div>
+
+                <a href="#" class="share-button" type="button" title="Share this article">
+                    <img class="icons" src="/Icons/share.png" alt="Share">
+                </a>
+
+                <svg class="hidden">
+                    <defs>
+                        <symbol id="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-share">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <polyline points="16 6 12 2 8 6"></polyline>
+                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </symbol>
+
+                        <symbol id="facebook" viewBox="0 0 24 24" fill="#3b5998" stroke="#3b5998" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </symbol>
+
+                        <symbol id="twitter" viewBox="0 0 24 24" fill="#1da1f2" stroke="#1da1f2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </symbol>
+
+                        <symbol id="email" viewBox="0 0 24 24" fill="#777" stroke="#fafafa" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </symbol>
+
+                        <symbol id="linkedin" viewBox="0 0 24 24" fill="#0077B5" stroke="#0077B5" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </symbol>
+
+                        <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </symbol>
+                    </defs>
+                </svg>
+
+            </div>
+        </div>
+
+        <!--Main content-->
+        <main class="container my-2 h-md">
+            <div class="row" id="firstTab">
+                <section class="col-lg order-lg-2 text-center mb-5 pt-5">
+                    <img class="animation img-fluid" src="/IMG/cosmic entity.png" alt="">
+                </section>
+                <section class="col-lg order-lg-1 text-center pt-lg-5 mt-lg-5">
+                    <h1 class="glow display-3 item-font text-center text-warning mt-lg-5 pt-lg-5">Ask the Universe</h1>
+                    <div class="font-border">
+                        <p  class="text-center text-light">Are you looking for answers to your questions? Or simply seeking an advice? Click play to see what the Universe is telling you.</p>
+                        <button href="" class="btn btn-lg btn-warning mt-4" onclick="playBtn()">Play</button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="bg-cosmic" id="secondTab">
+                <form class="mt-5">
+                    <h1 class="item-font text-warning">Petition</h1>
+                    <input type="text" id="petition" onfocus="resetOnFocus()" class="col-12">
+                    <h1 class="item-font text-warning">Question</h1>
+                    <input type="text" id="question" class="col-12">
+                    <button class="button-style me-3" type="button" id="askBtn" onclick="answerBtn()">Ask</button>
+                    <button class="button-style" type="button" onclick="resetBtn()">Reset</button>
+                    <div class="bg-warning mt-4 p-4 bg-opacity-50 text-light answer-box">
+                        <h3 id="answer" class="item-font"></h3>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="/JavaScript/toggleEvents.js"></script>
+        <script src="/JavaScript/shareScript.js"></script>
+        <script src="/JavaScript/script.js"></script>
+        <script src="/JavaScript/sideNav.js"></script>
+    
+    
+</body>
+
+</html>
